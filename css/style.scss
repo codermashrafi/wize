@@ -1,0 +1,703 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap");
+$bgColor: #14151c;
+$textColor: #fff;
+$primeryColor: #e0f014;
+$deepColor: #c9ccd9;
+$bgColor2: #272933;
+@mixin primaryBtn {
+  background-color: $primeryColor;
+  padding: 16px 26px;
+  text-decoration: none;
+  font-size: 20px;
+  color: $bgColor;
+  font-weight: 500;
+  transition: 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    background-color: $textColor;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Instrument Sans", sans-serif;
+}
+section {
+  padding: 80px 0;
+}
+
+body {
+  background-color: $bgColor;
+}
+.stickyBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  position: fixed;
+  background-color: $textColor;
+  color: $bgColor;
+  padding: 6px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  z-index: 9999;
+}
+.processHead {
+  text-align: center;
+  p {
+    color: $primeryColor;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: $textColor;
+  }
+}
+#header {
+  .navbar-toggler.collapsed {
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' fill='%23fff' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E");
+      transition: 0.3s ease;
+      overflow: hidden;
+    }
+  }
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' fill='%23fff' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z'/%3E%3C/svg%3E");
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+    border-color: $textColor;
+    box-shadow: none;
+  }
+  .navbar {
+    border-bottom: 1px solid #272933;
+    padding: 22px 0;
+    .navbar-brand {
+      img {
+        width: 70%;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $textColor;
+          font-size: 14px;
+          font-weight: 500;
+          margin: 0 10px;
+          &:hover {
+            color: $primeryColor;
+          }
+        }
+      }
+    }
+    .searchBtn {
+      .btn {
+        border-radius: 0px;
+        color: $textColor;
+        border-color: $textColor;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 24px;
+        &:hover {
+          background-color: $textColor;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .headerBanner {
+    padding: 60px 0;
+    .headerHeading {
+      text-align: center;
+      color: $textColor;
+      .headerTitle {
+        font-size: 14px;
+        font-weight: 500;
+        border-bottom: 2px solid $textColor;
+        display: inline-block;
+      }
+      h1 {
+        font-size: 60px;
+        font-weight: 500;
+        margin-top: 0.7rem;
+      }
+      .headerDesc {
+        margin-top: 1rem;
+        color: $deepColor;
+        font-size: 18px;
+        margin-bottom: 2.5rem;
+      }
+      .headerBtn {
+        @include primaryBtn();
+      }
+    }
+    .viewers {
+      margin-top: 3rem;
+      .viewersMain {
+        text-align: center;
+        .viewersImg {
+          img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid $primeryColor;
+            margin: 0px 3px;
+          }
+        }
+        .vp1 {
+          color: $textColor;
+          font-size: 20px;
+          font-weight: 500;
+          margin-top: 1rem;
+          span {
+            color: $primeryColor;
+          }
+        }
+        .vp2 {
+          color: $deepColor;
+          font-weight: 500;
+          margin-top: -0.5rem;
+        }
+      }
+    }
+  }
+}
+// video
+#video {
+  .videoTitle {
+    p {
+      text-align: center;
+      color: $deepColor;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  .videoArea {
+    a {
+      display: block !important;
+      text-align: center;
+      @include primaryBtn();
+      margin-top: -7px;
+    }
+  }
+}
+// counter
+#counter {
+  padding-top: 0;
+  .singleCount {
+    text-align: center;
+    background-color: $bgColor2;
+    padding: 44px 20px;
+    h2 {
+      font-size: 54px;
+      color: $primeryColor;
+    }
+    p {
+      color: $textColor;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+// services
+#services {
+  .serviceLeft {
+    .serviceTitile {
+      color: $primeryColor;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: 500;
+      color: $textColor;
+    }
+    .serviceDesc {
+      color: $deepColor;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    a {
+      @include primaryBtn();
+      margin: 10px 0;
+    }
+    .serviceTime {
+      color: rgb(169, 171, 187);
+      i {
+        padding-right: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+  .serviceRight {
+    .singleService {
+      margin-bottom: 1rem;
+      background-color: $bgColor2;
+      padding: 36px;
+      i {
+        color: $primeryColor;
+        font-size: 22px;
+      }
+      h3 {
+        color: $textColor;
+        font-size: 24px;
+        margin: 10px 0;
+      }
+      p {
+        font-size: 18px;
+        color: $deepColor;
+        font-weight: 500;
+      }
+    }
+  }
+}
+//   work
+#work {
+  position: relative;
+  .workHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    h4 {
+      color: $primeryColor;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 36px;
+      color: $textColor;
+      font-weight: 500;
+    }
+  }
+  .workSlider {
+    position: relative;
+    .owl-prev,
+    .owl-next {
+      color: $textColor;
+      font-size: 2rem;
+    }
+    .owl-prev {
+      position: absolute;
+      left: -2%;
+      top: 50%;
+    }
+    .owl-next {
+      position: absolute;
+      right: -2%;
+      top: 50%;
+    }
+  }
+}
+// growth
+#growth {
+  .col-lg-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .growthLeft {
+    background-color: $primeryColor;
+    padding: 80px 40px;
+    text-align: center;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .growthMiddle img {
+    height: 448px;
+    display: block;
+    object-position: center;
+    object-fit: contain;
+  }
+  .growthRight {
+    background-color: $bgColor2;
+    height: 100%;
+    padding: 60px;
+    .growthTitle {
+      color: $textColor;
+      border: 1px solid $primeryColor;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 4px 10px;
+    }
+    .growthDesc {
+      font-size: 32px;
+      font-weight: 500;
+      color: $textColor;
+      margin-bottom: 1rem;
+    }
+    .growthBtn {
+      font-size: 16px;
+      color: $primeryColor;
+      text-decoration: none;
+      font-weight: 600;
+      &:hover {
+        color: $textColor;
+        text-decoration: underline;
+      }
+    }
+    .growthCount {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5rem;
+      .singleCount {
+        h2 {
+          font-size: 36px;
+          font-weight: 600;
+          color: $primeryColor;
+          line-height: 24px;
+        }
+        p {
+          color: $textColor;
+        }
+      }
+    }
+  }
+}
+
+// growthSlider
+#growthSlider {
+  overflow-x: hidden;
+  // Animation
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  @keyframes scroll2 {
+    0% {
+      transform: translateX(calc(-250px * 7));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  // Styling
+  .slider {
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .slide-track {
+      animation: scroll 30s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+
+    .slide {
+      height: 250px;
+      width: 250px;
+      background-color: $primeryColor;
+      margin: 0px 10px;
+      padding: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .slider2 {
+    .slide-track2 {
+      animation: scroll2 30s linear infinite;
+    }
+  }
+}
+// process
+#process {
+  .singleProcess {
+    background-color: $bgColor2;
+    padding: 36px;
+    .number {
+      font-size: 24px;
+      font-weight: 600;
+      color: $primeryColor;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      color: $textColor;
+    }
+    .desc {
+      font-size: 18px;
+      color: $deepColor;
+      margin: 20px 0;
+    }
+    a {
+      @include primaryBtn();
+    }
+    .bottom {
+      color: rgb(169, 171, 187);
+      margin-top: 15px;
+      i {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+// testimonials
+#testimonials {
+  .singleTestimonial {
+    background-color: $bgColor2;
+    padding: 30px 36px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .stars {
+      i {
+        color: $primeryColor;
+      }
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      color: $textColor;
+      margin: 20px 0;
+    }
+    .desc {
+      color: $deepColor;
+      font-size: 18px;
+    }
+    .clientName {
+      margin-top: 3rem;
+      border-top: 1px solid #c9ccd933;
+      padding-top: 1rem;
+
+      .name {
+        color: $textColor;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+      }
+      .clientTitle {
+        font-size: 18px;
+        color: $deepColor;
+      }
+    }
+  }
+}
+// faq
+#faq {
+  .mainFaq {
+    .accordion {
+      .accordion-item {
+        border: none;
+        margin-bottom: 14px;
+      }
+      background-color: transparent;
+      .accordion-button {
+        background-color: $bgColor2;
+        color: $textColor;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 1.5rem 1.25rem;
+        box-shadow: none;
+        border: none;
+        overflow: hidden;
+        &:after {
+          background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z'/%3E%3C/svg%3E");
+          transition: 0.5s ease;
+        }
+        &:not(.collapsed)::after {
+          transform: rotate(135deg);
+          background-image: url("data:image/svg+xml,%3Csvg fill='%23000' xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z'/%3E%3C/svg%3E");
+        }
+        &:not(.collapsed) {
+          background-color: $textColor;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+// getStarted
+#getStarted {
+  .getStartedLeft {
+    .mainContent {
+      .user {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        .userImg {
+          img {
+            margin-right: 1rem;
+            height: 60px;
+            width: 60px;
+            border-radius: 60px;
+            object-fit: cover;
+            border: 1px solid $primeryColor;
+          }
+        }
+        .userTitle {
+          .name {
+            font-size: 20px;
+            font-weight: 700;
+            color: $textColor;
+            margin: 0;
+          }
+          .title {
+            margin: 0;
+            color: #a9abbb;
+          }
+        }
+      }
+      .getStartedDesc {
+        font-size: 18px;
+        color: $deepColor;
+      }
+      .listTitle {
+        font-size: 20px;
+        font-weight: 600;
+        color: $textColor;
+      }
+      .userList {
+        padding: 0;
+        margin: 0;
+        .listItem {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          color: $deepColor;
+          margin-bottom: 1rem;
+          font-size: 18px;
+          i {
+            display: block;
+            margin-right: 1rem;
+            font-size: 22px;
+            color: $primeryColor;
+          }
+        }
+      }
+    }
+  }
+}
+#footer {
+  padding-top: 80px;
+  .footerHead {
+    text-align: center;
+    background-color: $bgColor2;
+    padding: 60px 0;
+    img {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 60px;
+      color: $textColor;
+      padding: 1rem 0;
+      span {
+        color: $primeryColor;
+      }
+    }
+    p {
+      color: $deepColor;
+      font-size: 18px;
+    }
+  }
+  .footerBtn {
+    a {
+      @include primaryBtn();
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      padding: 40px 0;
+      font-weight: 600;
+    }
+  }
+  .footerBottom {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .copy {
+      color: $textColor;
+      p {
+        margin: 0;
+        a {
+          text-decoration: none;
+          color: $primeryColor;
+        }
+      }
+    }
+    .icons {
+      i {
+        font-size: 24px;
+        color: $textColor;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  #counter .singleCount {
+    margin-bottom: 20px;
+  }
+  #footer .footerBottom .copy p {
+    margin: 20px 0;
+  }
+  #footer .footerBottom {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  @mixin primaryBtn {
+    background-color: $primeryColor;
+    padding: 10px 26px;
+    font-size: 16px;
+  }
+  #header .headerBanner .headerHeading h1 {
+    font-size: 36px;
+  }
+  #header .headerBanner .headerHeading .headerDesc {
+    font-size: 16px;
+  }
+  .workSlider {
+    .owl-prev {
+      display: none;
+    }
+    .owl-next {
+      display: none;
+    }
+  }
+  #growth .growthRight {
+    padding: 30px;
+  }
+  .getStartedRight {
+    height: 500px !important;
+  }
+  #footer .footerHead h2 {
+    font-size: 30px;
+  }
+  #footer .footerBtn a {
+    font-size: 16px;
+  }
+  #footer .footerBottom .icons i {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
